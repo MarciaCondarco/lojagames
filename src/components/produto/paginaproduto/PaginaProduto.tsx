@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Link, useParams } from "react-router-dom"
+import {  useParams } from "react-router-dom"
 import type Produto from "../../../models/produto/Produto"
 import { buscar } from "../../../services/Service"
 import { PacmanLoader } from "react-spinners"
@@ -15,12 +15,14 @@ function PaginaProduto() {
         const {id} = useParams <{id: string}>();
         
                 async function buscarPorID(){
+                setIsLoading(true)
                 try {
                     await buscar(`/produtos/${id}`, setProduto)
                 } catch (error) {
                     alert('categoria não encontrada')
                 }
-            }
+                setIsLoading(false)
+                }
     
         // useEffect(()=>{
         //     buscarProdutos()
@@ -61,9 +63,9 @@ function PaginaProduto() {
             {/* div com categoria */}
             <div className="flex p-6 gap-30 justify-center bg-gray-200 ">
                 {/* barra de categoria - ira se transformar em componente */}
-                <div>Acessorios</div>
-                <div>Ação</div>
-                <div>RPG</div>
+                <div>Higiene</div>
+                <div>Perfume</div>
+                <div></div>
                 <div>Terror</div>
                 <div>Multiplayer</div>  
             </div>
@@ -94,8 +96,8 @@ function PaginaProduto() {
                         <a href="#" className="flex justify-center p-2 bg-gray-200 text-black">ADICIONAR CARRINHO</a>
                     </div>
                     <div className="flex justify-center bg-gray-200 p-2 text-black">
-                        <Link to="/Finalizacao">Comprar
-                        </Link>
+                        Comprar
+                        
                     </div>
                 </div>
             </div>

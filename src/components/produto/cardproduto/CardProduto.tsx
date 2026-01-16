@@ -10,11 +10,11 @@ function CardProduto({produto}: CardProdutoProps) {
     return (
         <>
             <div >
-                <div className="flex flex-col gap-4 justify-center items-center">
+                <div className="flex flex-col gap-4 justify-center items-center bg-gray-400 p-9">
                     <div className="text-white">
                         <img src={produto.foto} alt="foto do banner" className="h-64"/>
                     </div>
-                    <div className="text-white">
+                    <div className="text-black size-lg font-bold">
                         <h2>{produto.nome}</h2>
                     </div>
                     <div className="text-white">

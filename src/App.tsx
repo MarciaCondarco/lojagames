@@ -8,13 +8,14 @@ import PaginaProduto from "./components/produto/paginaproduto/PaginaProduto"
 import Home from "./pages/home/Home"
 import ListaProduto from "./components/produto/listaproduto/ListaProduto"
 import FormProduto from "./components/produto/formproduto/FormProduto"
+import ListarProdutosPorNome from "./components/produto/listarprodutopornome/ListarProdutosPorNome"
 
 
 function App() {
 
   return (
     <>
-      <main className="bg-black">
+      <main className="bg-gray-600">
         {/* <img src="https://ik.imagekit.io/xmqgsi96x8/baixados%20(1).jpeg" alt="foto de fundo" className="absolute -z-10 w-full" /> */}
           {/* blur */}
 
@@ -31,6 +32,7 @@ function App() {
                   <Route path="/produtos/:id" element={<PaginaProduto />} />
                   {/* <Route path="/postagens" element={<ListaProduto />} /> */}
                   <Route path="/formproduto" element={<FormProduto />} />
+                  <Route path="/consultarnome/:nome" element={<ListarProdutosPorNome />} />
                 </Route>
               </Routes>
             <Footer />

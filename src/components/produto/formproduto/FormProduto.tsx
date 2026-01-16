@@ -72,7 +72,7 @@ function FormProduto() {
     return (
         <div className="flex justify-between items-center ">
 
-                <div className="flex flex-col items-center p-20 px-30 rounded-full">
+                <div className="flex flex-col items-center p-20 px-30 rounded-fullz">
                     <img src="https://ik.imagekit.io/xmqgsi96x8/baixados%20(3).jpeg" alt="imagem de pessoas feliz"/>
                 </div>
                 <div className="flex flex-col items-center w-full p-20 px-30 ">
@@ -89,7 +89,7 @@ function FormProduto() {
                             type="text"
                             id="tipo"
                             name="tipo"
-                            placeholder="Digite o tipo"
+                            placeholder="Digite o nome"
                             className="border-2 rounded-xl bg-white"
                             value = {produto.nome}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarProduto(e)}
@@ -102,7 +102,7 @@ function FormProduto() {
                             type="text"
                             id="tipo"
                             name="tipo"
-                            placeholder="Digite o tipo"
+                            placeholder="Digite o preco"
                             className="border-2 rounded-xl bg-white"
                             value = {produto.preco}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarProduto(e)}
@@ -115,7 +115,7 @@ function FormProduto() {
                             type="text"
                             id="tipo"
                             name="tipo"
-                            placeholder="Digite o tipo"
+                            placeholder="Digite a foto"
                             className="border-2 rounded-xl bg-white"
                             value = {produto.foto}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarProduto(e)}
